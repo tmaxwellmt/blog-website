@@ -1,20 +1,50 @@
-##Phase One
-Build an express app using the express App using the express app generator [Express Generator](npm install express-generator -g)
-1)`sudo npm install express-generator -g`
-  -only need to do this ONCE
-  -to use -> `express (name of app)`
-2) `express my_blog`
-ignore `node_modules` with the command `echo 'node_modules' >> .gitignore`
+###Phase One Notes
+
+Basic Setup
+
+Bootstrap the backend using Express Generator
+
+`sudo npm install express-generator -g`
+only need to install globally once
+To use -> express nameOfApp
+express blog
+WE ARE GOING TO COMMIT OFTEN
+
+Let's make sure we ignore node_modules
+
+  `echo 'node_modules/' >> .gitignore`
+
 Delete any unnecessary things the generator created
-  -i.e. views folder and any view engine middleware
-  -public directory
 
-Take the app for a spin
-Throw a test in beneath the first app.use's in app.js
-`app.get('/test', function (){
-  res.json({message: " App is barely functioning"})
-});`
+ie: Views folder and any view engine middleware
+  public directory
+  Add a test endpoint to app.js,
 
-If it is functional, commit your code
+  `app.get('/test', function(req,res){
+    res.json({message: "App functioning properly"})
+  });`
 
-before creating API, checkout to a new branch
+update server in `bin/www to use port 3001:` and `var port = normalizePort(process.env.PORT || '3001')`;
+
+Take the app for a spin, and test your endpoint using PostMan
+
+If the app is functional - commit your code
+
+Configure MongoDB
+  - Install any dependencies
+    - IE Mongo & Mongoose
+  - Add magically connect to Database line
+  - Commit code
+
+### begin API Phase
+  -checkout to a safe branch `git checkout -b articles`
+  -create article model
+  -create routes folder, and 'routes/articles.js' file
+  -create endpoints in 'routes/articles' ONE AT A TIME and continually test using postman
+  -Once they ALL work!
+    -`git add -A`
+    -`git commit -m "message"`
+    -`git push origin articles` -> pushes it to new branch
+    -`git checkout master`
+    -`git merge articles` -> brings new code into articles
+    -`git push origin master` -> syncs master branch with new code
