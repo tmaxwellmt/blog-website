@@ -30,12 +30,22 @@ Take the app for a spin, and test your endpoint using PostMan
 
 If the app is functional - commit your code
 
-Configure MongoDB
-  - Install any dependencies
-    - IE Mongo & Mongoose
-  - Add magically connect to Database line
-  - Commit code
+---------------------
+##Configure MongoDB
+- install any dependencies(mongo, mongoose)
+- add configuration to DB line via:
+  - make a new folder named 'config', new file called 'database-connect.js'
+    ```var mongoose = require('mongoose');
 
+    module.exports = () => {
+      mongoose.connect('mongodb://localhost/my_blog');
+      console.log('Database running')
+    }
+    ```
+- then require that file into 'app.js' with `require('./config/database-connection')();`
+- commit code
+
+---------------------
 ### begin API Phase
   -checkout to a safe branch `git checkout -b articles`
   -create article model
