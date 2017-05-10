@@ -38,28 +38,28 @@ Resources
   -title
   -content
 
-example
-Article
-```
-{
- title: 'My first blog post',
- content: 'Lorem ipsum..
- '
-}
+example Article
+
+  {
+   title: "My first blog post",
+   content: "Lorem ipsum...."
+
+  }
 ```
 ___________________________
-### Front-end Overview
-technologies
-  -ReactJS
-  -React Router
-  -Bootstrap
 
-Pages
-  -Home
-  -Articles
-    -view
-    -edit
-  -Contact
+### Front-end Overview
+  technologies
+    -ReactJS
+    -React Router
+    -Bootstrap
+
+  Pages
+    -Home
+    -Articles
+      -view
+      -edit
+    -Contact
 
   ***toDo: React Component Hierarchy Tree***
 
@@ -67,22 +67,23 @@ Pages
 ___________________________
 
 #### Stage One
-1)Create functional Node/Express Application
-2)Implement CRUD restful API for article resource
-3)TDD: Implement at least 3 tests
+  1)C reate functional Node/Express Application
+  2) Implement CRUD restful API for article resource
+  3) TDD: Implement at least 3 tests
 
 ___________________________
 
 #### Stage Two
-1)Create functional React Application
-2)Implement router, to get to each one of your containers
-3)Implement client side CRUD for Articles
+  1) Create functional React Application
+  2) Implement router, to get to each one of your containers
+  3) Implement client side CRUD for Articles
 
 ___________________________
 #### Product RoadMap
-1)User authentication with [auth0](https://auth0.com/)
-2) Protecting routes/functionality from non-authorized users
-3)Forming comments/articles relationships
-4)Design Home page using Sketch
-5)Update article to have category & category relationships
-6)Migrate to production using [Heroku](https://heroku.com)```
+  1) Seed Dev DB with fake data using [faker](https://github.com/Marak/faker.js)
+  1) User authentication with [auth0](https://auth0.com/)
+  2) Protecting routes/functionality from non-authorized users
+  3) Forming comments/articles relationships
+  4) Design Home page using Sketch
+  5) Update article to have category & category relationships
+  6) Migrate to production using [Heroku](https://heroku.com)
