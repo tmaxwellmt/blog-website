@@ -11,6 +11,8 @@ require('./config/database-connect') ();
 var app = express();
 var mongoose = require('mongoose');
 
+//mongoose.connect('mongodb://localhost/api/articles');
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -21,6 +23,10 @@ app.use(cookieParser());
 app.get('/test', function (req, res) {
   res.json({message: "App functioning properly"})
 });
+
+// app.get('/', function (req, res) {
+//   res.render('index')
+// });
 
 app.get('/articles', function (req, res) {
   res.render('articles')
@@ -45,12 +51,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-var server = app.listen(3000, function () {
-  console.log('server is running');
-});
-
-module.exports = app;
-
 
 module.exports = app;
