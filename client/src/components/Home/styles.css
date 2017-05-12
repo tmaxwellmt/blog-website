@@ -1,0 +1,5 @@
+.large-button {
+  composes: button from '../../SharedStyles/styles.css';
+  font-size: 23px;
+  color: orange;
+}

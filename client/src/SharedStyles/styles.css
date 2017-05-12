@@ -1,0 +1,9 @@
+.button {
+  border: solid 3px blue;
+  padding: 10px;
+}
+
+.button:hover {
+  border: solid 3px red;
+  padding: 20px;
+}

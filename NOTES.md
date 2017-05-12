@@ -46,15 +46,82 @@ If the app is functional - commit your code
 - commit code
 
 ---------------------
-### begin API Phase
-  -checkout to a safe branch `git checkout -b articles`
-  -create article model
-  -create routes folder, and 'routes/articles.js' file
-  -create endpoints in 'routes/articles' ONE AT A TIME and continually test using postman
-  -Once they ALL work!
-    -`git add -A`
-    -`git commit -m "message"`
-    -`git push origin articles` -> pushes it to new branch
-    -`git checkout master`
-    -`git merge articles` -> brings new code into articles
-    -`git push origin master` -> syncs master branch with new code
+#### Begin API Phase
+
+  - Checkout to a safe branch
+  - `git checkout -b articles`
+  - Create article Model
+  - Create routes folder, and `routes/articles.js`
+  - Create Endpoints in `routes/articles` ONE AT A TIME, and continually test using PostMan
+  - Once you are satisfied all CRUD routes work
+  - `git add -A`
+  - `git commit -m 'some msg'`
+  - `git push origin articles` -> Note you pushed to your new branch
+  - `git checkout master`
+  - `git merge articles` -> brings your new code into articles
+  - `git push origin master` -> sync your master branch with new code
+
+
+  Once CRUD routes are implemented, refactor to use the `index` export method,
+  it should look like this:
+  ```
+ const express = require(‘express’);
+ const ArticleRoutes = require(‘./articles/routes’)
+
+ /* GET test route. */
+ module.exports = (app) => {
+   app.get(‘/api/articles’, ArticleRoutes.getAll);
+   app.post(‘/api/articles’, ArticleRoutes.createOne);
+   app.get(‘/api/articles/:article_id’, ArticleRoutes.getOne);
+   app.delete(‘/api/articles/:article_id’, ArticleRoutes.removeOne);
+   app.put(‘/api/articles/:article_id’, ArticleRoutes.editOne);
+ };
+
+Testing:
+Use Mocha, Chai, & chai-http to run your test suite. In order to have a seperate DB for testing purposed, add this script to your `package.json`
+`    "test": "NODE_ENV=test mocha --no-deprecation --sort --colors --inline-diffs --bail"
+`
+
+Then in your database config file, create a database based on your NODE_ENV, like so:
+
+```
+var mongoose = require(‘mongoose’);
+
+module.exports = () => {
+ if (process.env.NODE_ENV === ‘test’ ) {
+   mongoose.connect(“mongodb://localhost/test-pt-blog”);
+   console.log(“:file_folder: :open_file_folder: :file_cabinet: TEST DATABASE OPERATIONAL :file_cabinet: :open_file_folder: :file_folder:“);
+ } else {
+   mongoose.connect(“mongodb://localhost/pt-blog”)
+   console.log(“:file_folder: :open_file_folder: :file_cabinet: DEV DATABASE OPERATIONAL :file_cabinet: :open_file_folder: :file_folder:“);
+ }
+
+}
+
+#### Phase Two:
+
+We are going to use 'custom-react-scripts' to bootstrap our React app (in the past we have used create-react-app), this will give us a bit more control over our configuration
+
+[custom-react-scripts](https://www.npmjs.com/package/react-scripts-custom)
+
+`npm install -g create-react-app`
+
+Then we will cut out the extra stuff, and reconfigure the directory to our liking
+
+
+Install React-router -  
+`npm install --save react-router@3`
+
+
+
+
+Blog Post Components
+
+ArticleList
+  ArticleCard
+
+PostArticle
+
+EditArticle
+
+ViewArticle
