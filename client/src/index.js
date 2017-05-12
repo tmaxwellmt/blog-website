@@ -8,6 +8,7 @@ import {Router,
 
 import App from './App';
 import {HomeContainer} from './containers'
+import {AboutContainer} from './containers'
 
 
 ReactDOM.render(
@@ -15,6 +16,7 @@ ReactDOM.render(
     <Route path="/" component={App}>
       <Route path="/Home" component={HomeContainer}/>
       <IndexRoute component={HomeContainer} />
+      <Route path="/About" component={AboutContainer}/>
     </Route>
   </Router>,
   document.getElementById('root')
