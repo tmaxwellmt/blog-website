@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var Article = require('./models/article');
-var articleRoutes = require('./routes/articles');
+var routes = require('./routes/index');
 require('./config/database-connect') ();
 
 var app = express();
@@ -28,11 +28,11 @@ app.get('/test', function (req, res) {
 //   res.render('index')
 // });
 
+routes(app);
+
 app.get('/articles', function (req, res) {
   res.render('articles')
 });
-
-app.use('/api/articles', articleRoutes)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
