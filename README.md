@@ -45,7 +45,7 @@ example Article
    content: "Lorem ipsum...."
 
   }
-```
+
 ___________________________
 
 ### Front-end Overview
@@ -59,7 +59,7 @@ ___________________________
     -Articles
       -view
       -edit
-    -Contact
+    -Contacts
 
   ***toDo: React Component Hierarchy Tree***
 
@@ -87,6 +87,3 @@ ___________________________
   4) Design Home page using Sketch
   5) Update article to have category & category relationships
   6) Migrate to production using [Heroku](https://heroku.com)
-
-
-  

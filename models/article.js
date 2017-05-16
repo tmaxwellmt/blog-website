@@ -13,6 +13,7 @@ ArticleSchema.methods.loadData = function(data) {
   this.category = data.category ? data.category : this.category;
   this.content = data.content ? data.content : this.content;
   this.author = data.author ? data.author : this.author;
+  this.img = data.img ? data.img : this.img;
 }
 
 module.exports = mongoose.model('Article', ArticleSchema);
