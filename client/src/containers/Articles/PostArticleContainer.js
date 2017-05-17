@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import ArticleCard from './ArticleCard';
+import PostArticleForm from './PostArticleForm';
 import $ from "jquery";
 import {browserHistory} from "react-router";
 
@@ -56,7 +56,7 @@ class PostArticleContainer extends Component {
           updateAuthor={this.updateAuthor}
           updateImg={this.updateImg}
           updateCategory={this.updateCategory}
-          updateContnent={this.updateContnent}/>
+          updateContent={this.updateContent}/>
 
       </div>
     )

@@ -5,6 +5,7 @@ var ArticleSchema = new mongoose.Schema({
   category: String,
   content: {required: true, type: String},
   author: String,
+  img: String,
 });
 
 ArticleSchema.methods.loadData = function(data) {
