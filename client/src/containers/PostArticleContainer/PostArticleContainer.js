@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PostArticleForm from './PostArticleForm';
+import {PostArticleForm} from '../../components';
 import $ from "jquery";
 import {browserHistory} from "react-router";
 
@@ -37,7 +37,7 @@ class PostArticleContainer extends Component {
     method: "POST",
     data: article
   }).done((response) =>
-    browserHistory.push('/Articles'))
+    browserHistory.push('/articles'))
   }
 
   updateTitle = (event) => this.setState({title: event.target.value})

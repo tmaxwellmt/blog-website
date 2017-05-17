@@ -1,24 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router,
-        Route,
-        browserHistory,
-        IndexRoute}
-        from 'react-router'
-
+import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 import App from './App';
-import {HomeContainer} from './containers'
-import {AboutContainer} from './containers'
-import {ArticlesContainer} from './containers'
-
+import {HomeContainer, AboutContainer, ArticlesContainer, PostArticleContainer, EditArticleContainer} from './containers';
+require('bootstrap/dist/css/bootstrap.css');
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="/Home" component={HomeContainer}/>
+      <Route path="/home" component={HomeContainer}/>
+      <Route path="/about" component={AboutContainer}/>
+      <Route path="/articles" component={ArticlesContainer}/>
+      <Route path="/post" component={PostArticleContainer}/>
+      <Route path="/edit" component={EditArticleContainer}/>
       <IndexRoute component={HomeContainer} />
-      <Route path="/About" component={AboutContainer}/>
-      <Route path="/Articles" component={ArticlesContainer}/>
     </Route>
   </Router>,
   document.getElementById('root')

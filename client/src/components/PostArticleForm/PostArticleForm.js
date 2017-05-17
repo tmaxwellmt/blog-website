@@ -16,12 +16,17 @@ const PostArticleForm = (props) => {
             onChange={(event) => props.updateImg(event)}/>
         </div>
         <div className="form-group">
-          <label className="label" for="category">Super Power:</label>
+          <label className="label" for="category">Category:</label>
           <input type= "text" placeholder="Category"
             onChange={(event) => props.updateCategory(event)}/>
         </div>
         <div className="form-group">
-          <label className="label" for="author">Universe:</label>
+          <label className="label" for="content">Content:</label>
+          <input type= "text" placeholder="Content"
+            onChange={(event) => props.updateContent(event)}/>
+        </div>
+        <div className="form-group">
+          <label className="label" for="author">Author:</label>
           <input type= "text" placeholder="Author"
             onChange={(event) => props.updateAuthor(event)}/>
         </div>

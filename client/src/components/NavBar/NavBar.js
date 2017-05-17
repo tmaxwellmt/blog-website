@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import logo from './public/myBlog_logo1.svg';
+import logo from './myBlog_logo1.svg';
 
 const NavBar = () =>
   <div className="">

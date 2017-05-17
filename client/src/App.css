@@ -1,3 +1,24 @@
 .container {
-  background-color: red;
+  background-color: white;
+}
+
+.logo {
+  height: 60%;
+}
+
+.active {
+  position: center;
+  padding: 10px;
+  overflow: hidden;
+  font-family: "paralucent";
+  font-size: 30px;
+  color: #300a00;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-image: url(http://maxwell-creative.com/wp-content/uploads/2015/11/741875_m-e1480542300232.jpg);
+  background-size: cover;
+  box-shadow: 0 0 5px rgba(0,0,0,.8);
 }
