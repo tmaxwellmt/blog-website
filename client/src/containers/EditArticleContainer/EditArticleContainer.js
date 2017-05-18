@@ -55,9 +55,8 @@ class EditArticleContainer extends Component {
       url: `/api/articles/${this.props.params.article_id}`,
       method: "PUT",
       data: data
-    }).done(response => {
-      console.log(response);
-    })}
+    }).done((response) => browserHistory.push('/articles')
+    )}
 
     updateTitle = (event) => this.setState({title: event.target.value})
     updateImg = (event) => this.setState({img: event.target.value})
