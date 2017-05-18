@@ -11,4 +11,4 @@ class AboutContainer extends Component {
   }
 }
 
-export default About;
+export default AboutContainer;

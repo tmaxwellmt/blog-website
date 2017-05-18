@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,6 +8,13 @@ var bodyParser = require('body-parser');
 var Article = require('./models/article');
 var routes = require('./routes/index');
 require('./config/database-connect') ();
+require('./config/database-seeder') ();
+
+// if(process.env.SEED_DATABASE === "true") {
+//   require('./config/database-seeder')();
+// }
+
+
 
 var app = express();
 var mongoose = require('mongoose');

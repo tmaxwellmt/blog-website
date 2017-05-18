@@ -7,9 +7,9 @@ const NavBar = () =>
     <nav className="navbar">
       <img className="logo" src={logo} alt="logo" />
       <ul>
-        <Link className ="active" activeClassName="active-link" to="/Home"> Home </Link>
-        <Link className ="active" activeClassName="active-link" to="/About"> About </Link>
-        <Link className ="active" activeClassName="active-link" to="/Articles"> Blog </Link>
+        <Link className ="active" activeClassName="active-link" to="/home"> Home </Link>
+        <Link className ="active" activeClassName="active-link" to="/about"> About </Link>
+        <Link className ="active" activeClassName="active-link" to="/articles"> Blog </Link>
       </ul>
     </nav>
   </div>

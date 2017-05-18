@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {EditArticleForm} from '../../components';
 import $ from "jquery";
-import {browserHistory} from "react-router";
+
 
 class EditArticleContainer extends Component {
   state = {
