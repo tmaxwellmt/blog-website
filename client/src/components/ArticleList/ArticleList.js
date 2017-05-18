@@ -12,9 +12,9 @@ const ArticleList = (props) => {
             <li>{item.category}</li>
             <li>{item.content}</li>
             <li>{item.author}</li>
-            <li>{item.img}</li>
+            <img src={item.img} />
           </ol>
-          <Link className="postButton" to={`/articles/edit/${item._id}`}>Edit</Link>
+          <Link className="postButton" to={`/edit/${item._id}`}>Edit</Link>
         </div>
         )
       })

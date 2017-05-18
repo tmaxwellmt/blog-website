@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {EditArticleForm} from '../../components';
+import { EditArticleForm } from '../../components';
 import $ from "jquery";
+import { browserHistory } from 'react-router';
 
 
 class EditArticleContainer extends Component {
@@ -29,7 +30,7 @@ class EditArticleContainer extends Component {
       }).done(data => {
         console.log(data.title, "ARTICLE NAME")
         this.setState({ title: data.title,
-          content: data.content,
+                        content: data.content,
                         category: data.category,
                         author: data.author,
                         img: data.img,
@@ -64,22 +65,14 @@ class EditArticleContainer extends Component {
     updateCategory = (event) => this.setState({category: event.target.value})
     updateAuthor = (event) => this.setState({author: event.target.value})
 
-  updateContent(event){
-    event.preventDefault();
-    const tempArray = [];
-    tempArray.push(this.state.newArticle);
-    this.setState({ content: tempArray});
-    this.setState({ newArticle: ''});
-    console.log(this.state.newArticle);
-  }
+    deleteById = this.deleteById.bind(this)
 
-  removeContent(event){
-    event.preventDefault();
-    let tempArray = this.state.content;
-    tempArray = tempArray.length > 0 ? tempArray.splice(-1) : tempArray;
-    console.log('tempArray', tempArray);
-    this.setState({ content: tempArray});
-    console.log(this.state.content);
+    deleteById(event) {
+      event.preventDefault();
+      $.ajax({
+        url: `/api/articles/${this.props.params.article_id}`,
+        method: 'DELETE'
+      }).done((response) => browserHistory.push('/articles'))
   }
 
   render() {
@@ -94,9 +87,9 @@ class EditArticleContainer extends Component {
                         title={this.state.title}
                         content={this.state.content}
                         updateContent={(event) => this.updateContent(event)}
-                        removeContent={(event) => this.removeContent(event)}
                         category={this.state.category}
-                        img={this.state.img} />
+                        img={this.state.img}
+                        deleteById={this.deleteById}/>
                         : <h3> Still Thinking... </h3>
         }
         </div>
