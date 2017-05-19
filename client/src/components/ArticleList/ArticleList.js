@@ -15,6 +15,8 @@ const ArticleList = (props) => {
             <img src={item.img} />
           </ol>
           <Link className="postButton" to={`/edit/${item._id}`}>Edit</Link>
+          <Link className="viewButton" to={`/article/${item._id}`}>View Post</Link>
+
         </div>
         )
       })

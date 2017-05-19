@@ -17,8 +17,9 @@ class ArticlesContainer extends Component {
         url: "/api/articles",
         method: "GET"
       }).done((response) => {
+        let articles = response.data.reverse();
         console.log(response)
-        this.setState({ articles: response.data })
+        this.setState({ articles: articles })
       })
     }
 

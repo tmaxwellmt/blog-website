@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 import App from './App';
-import {HomeContainer, AboutContainer, ArticlesContainer, PostArticleContainer, EditArticleContainer} from './containers';
+import {HomeContainer, AboutContainer, ArticlesContainer, PostArticleContainer, EditArticleContainer, SingleArticleContainer} from './containers';
 require('bootstrap/dist/css/bootstrap.css');
 
 ReactDOM.render(
@@ -13,6 +13,7 @@ ReactDOM.render(
       <Route path="/articles" component={ArticlesContainer}/>
       <Route path="/post" component={PostArticleContainer}/>
       <Route path="/edit/:article_id" component={EditArticleContainer}/>
+      <Route path="/article/:article_id" component={SingleArticleContainer}/>
       <IndexRoute component={HomeContainer} />
     </Route>
   </Router>,

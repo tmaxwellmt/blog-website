@@ -18,18 +18,22 @@ const EditArticleForm = (props) => {
         <div className="form-group">
           <label className="label">Category: </label>
           <input type= "text" value={props.category} placeholder="Category"
-            onChange={(event) => props.updateField("Category", event.target.value)}/>
+            onChange={(event) => props.updateField("category", event.target.value)}/>
+        </div>
+        <div className="form-group">
+          <label className="label">Content: </label>
+          <input type= "text" value={props.content} placeholder="Content"
+            onChange={(event) => props.updateField("content", event.target.value)}/>
         </div>
         <div className="form-group">
           <label className="label">Author: </label>
           <input type= "text" value={props.author} placeholder="Author"
-            onChange={(event) => props.updateField("Author", event.target.value)}/>
+            onChange={(event) => props.updateField("author", event.target.value)}/>
         </div>
         <div className="edit-form-btns">
-          <button onClick={(event) => props.updateArticle(event)} className="btn btn-default">Update Article +</button>
+          <button onClick={(event) => props.handleSubmit(event)} className="btn btn-default">Update Article +</button>
           <button onClick={(event) => props.deleteById(event)} className="btn btn-default">Delete Article -</button>
         </div>
-          <button type="submit" className="edit-button">Post Edits</button>
       </form>
     </div>
   )
