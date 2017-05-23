@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import {container} from './App.css';
+import {NavBar} from '../../NavBar/Navbar';
+
 
 class App extends Component {
   render() {
     return (
-      <div className={container}>
-        {this.props.children}
+      <div className="dr-flex-box">
+        <div class="dr-flex-item dr-top">
+          <NavBar />
+        </div>
+        <div class="dr-flex-item dr-content">
+          {this.props.children}
+        </div>
+        <div class="dr-flex-item dr-footer">
+
+        </div>
       </div>
     );
   }

@@ -10,6 +10,7 @@ const NavBar = () =>
         <Link className ="active" activeClassName="active-link" to="/home"> Home </Link>
         <Link className ="active" activeClassName="active-link" to="/about"> About </Link>
         <Link className ="active" activeClassName="active-link" to="/articles"> Blog </Link>
+        <Link className ="active" activeClassName="active-link" to="/post"> Blog </Link>
       </ul>
     </nav>
   </div>
