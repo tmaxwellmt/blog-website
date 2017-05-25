@@ -4,7 +4,7 @@ import './styles.css';
 
 const ArticleList = (props) => {
   return (
-    <div className="List-flex">
+    <div className="list-flex">
     { props.articles.map((item, index) => {
       return (
         <div key={index} className="article-panel">

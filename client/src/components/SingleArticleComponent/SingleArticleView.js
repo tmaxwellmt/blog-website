@@ -6,9 +6,6 @@ const SingleArticleView = (props) => {
   return (
     <div>
       <div>
-
-
-
             <div className='blog-panel'>
               <h3 className='blog-title'>{ props.title }</h3>
                 <ul className='blog-text'>

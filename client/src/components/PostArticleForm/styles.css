@@ -1,0 +1,50 @@
+.post-form {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 500px;
+  background: #F7F7F7;
+  padding: 25px 15px 25px 10px;
+  font: 12px Georgia, "Times New Roman", Times, serif;
+  color: red;
+  border:1px solid #E4E4E4;
+  box-shadow: 3px 3px 7px black;
+}
+
+.form-header h1{
+  font-family: "vox-round";
+  font-size: 40px;
+  padding: 0px 0px 10px 40px;
+  display: block;
+  border-bottom:1px solid #E4E4E4;
+  margin: -10px -15px 30px -10px;;
+  color: #888;
+}
+
+.post-form label {
+  display: block;
+  margin: 0px;
+  float: left;
+  width: 20%;
+  text-align: right;
+  font-size: 12px;
+  padding-right: 15px;
+  margin-top: 10px;
+  color: #0804eb;
+}
+
+.post-form input[type="text"], .basic-grey textarea, .basic-grey select {
+  border: 1px solid #DADADA;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 70%;
+  font-size: 12px;
+  line-height:15px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}

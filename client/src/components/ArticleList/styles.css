@@ -1,5 +1,5 @@
 
-.hero-flex {
+.list-flex {
   display: flex;
   justify-content: space-around;
   width: auto;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.hero-panel{
+.article-panel{
   background-image: url(http://static.tumblr.com/35e65db16ead81f1a70934d0565fcccc/u0trukz/5frn58kfc/tumblr_static_eohd5ukwu9wg0cwowg40s0w4w.jpg);
   background-size: cover;
   border: 1px solid #f2f2f2;
@@ -39,7 +39,7 @@ ol {
   list-style: none;
 }
 
-nav li {
+nav Link {
   display: inline-block;
   margin-left: 70px;
   padding-top: 23px;
