@@ -6,6 +6,7 @@ var ArticleSchema = new mongoose.Schema({
   content: {required: true, type: String},
   author: String,
   img: String,
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment"}]
 });
 
 ArticleSchema.methods.loadData = function(data) {

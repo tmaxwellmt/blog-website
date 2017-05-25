@@ -1,0 +1,76 @@
+
+.hero-flex {
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-panel{
+  background-image: url(http://static.tumblr.com/35e65db16ead81f1a70934d0565fcccc/u0trukz/5frn58kfc/tumblr_static_eohd5ukwu9wg0cwowg40s0w4w.jpg);
+  background-size: cover;
+  border: 1px solid #f2f2f2;
+  width: calc(50% - 25px);
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 7px black;
+}
+
+
+h3{
+  font-family: "paralucent";
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  color: red;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+nav {
+  float: right;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}

@@ -1,18 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router';
 import logo from './myBlog_logo1.svg';
+import './styles.css';
 
 const NavBar = () =>
-  <div className="">
-    <nav className="navbar">
-      <img className="logo" src={logo} alt="logo" />
-      <ul>
-        <Link className ="active" activeClassName="active-link" to="/home"> Home </Link>
-        <Link className ="active" activeClassName="active-link" to="/about"> About </Link>
-        <Link className ="active" activeClassName="active-link" to="/articles"> Blog </Link>
-        <Link className ="active" activeClassName="active-link" to="/post"> Blog </Link>
-      </ul>
-    </nav>
-  </div>
+  <header>
+    <div className="container">
+      <nav>
+        <img src={logo} alt="logo" />
+        <ul>
+          <li><a href="/"> Home </a></li>
+          <li><a href="/about"> About </a></li>
+          <li><a href="/articles"> Articles </a></li>
+          <li><a href="/post"> Post </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 export default NavBar
