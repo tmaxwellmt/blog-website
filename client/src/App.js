@@ -7,13 +7,13 @@ class App extends Component {
   render() {
     return (
       <div className="dr-flex-box">
-        <div class="dr-flex-item dr-top">
+        <div className="dr-flex-item dr-top">
           <NavBar />
         </div>
-        <div class="dr-flex-item dr-content">
+        <div className="dr-flex-item dr-content">
           {this.props.children}
         </div>
-        <div class="dr-flex-item dr-footer">
+        <div className="dr-flex-item dr-footer">
 
         </div>
       </div>

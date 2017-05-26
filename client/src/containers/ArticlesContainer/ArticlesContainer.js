@@ -18,7 +18,7 @@ class ArticlesContainer extends Component {
         method: "GET"
       }).done((response) => {
         let articles = response.data.reverse();
-        console.log(response)
+        console.log(response, "new comment")
         this.setState({ articles: articles })
       })
     }
@@ -31,8 +31,6 @@ class ArticlesContainer extends Component {
           <div className="article-list">
             {this.state.articles ? <ArticleList articles={this.state.articles}/> : <h5>loading...</h5> }
           </div>
-          <form onSubmit={this.submitArticle}>
-          </form>
         </div>
       </div>
     );

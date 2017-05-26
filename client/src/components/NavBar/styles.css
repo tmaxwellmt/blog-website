@@ -1,28 +1,10 @@
-
 .container {
 	width: auto;
 	margin: 0 auto;
 }
 
-header {
-  background: #f2f2f2;
-}
-
-header::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-nav .logo {
-	display: inline-block;
-  float: left;
-  padding: 10px 0;
-  height: 20%;
-}
-
-.navbar {
-  display: flex;
+.header {
+	display: flex;
   justify-content: space-around;
   list-style: none;
   background-image: url(http://maxwell-creative.com/wp-content/uploads/2015/11/741875_m-e1480542300232.jpg);
@@ -30,32 +12,53 @@ nav .logo {
   box-shadow: 0 0 5px rgba(0,0,0,.8);
 }
 
-nav ul {
+.header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+}
+
+.logo {
+	display: inline-block;
+	max-width: 50%;
+  float: center;
+  padding: 10px 0;
+  height: 20%;
+}
+
+.nav ul {
   margin: 0;
   padding: 0;
+	float: left;
   list-style: none;
 }
 
-nav li {
+.nav li {
   display: inline-block;
   margin-left: 70px;
-  padding-top: 23px;
+  padding-top: 20px;
 
   position: relative;
 }
 
-nav a {
+.nav a {
   color: #444;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
 }
 
-nav a:hover {
-  color: #000;
+.nav a:hover {
+  color: #fc5e1b;
 }
 
-nav a::before {
+.nav a::before {
   content: '';
   display: block;
   height: 5px;
@@ -68,6 +71,6 @@ nav a::before {
   transition: all ease-in-out 250ms;
 }
 
-nav a:hover::before {
+.nav a:hover::before {
   width: 100%;
 }

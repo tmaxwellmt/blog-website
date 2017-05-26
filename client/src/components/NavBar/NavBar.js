@@ -1,20 +1,20 @@
 import React from 'react';
-import logo from './myBlog_logo1.svg';
-import './styles.css';
+import {logo, container, header, nav} from './styles.css';
+import Logo from './logo.svg';
 
 const NavBar = () =>
-  <header>
-    <div className="container">
-      <nav>
-        <img className="logo" src={logo} alt="logo" />
-        <ul>
-          <li><a href="/"> Home </a></li>
-          <li><a href="/about"> About </a></li>
-          <li><a href="/articles"> Articles </a></li>
-          <li><a href="/post"> Post </a></li>
-        </ul>
-      </nav>
+  <header className={header}>
+    <div className={logo}>
+      <img src={Logo} alt="logo" />
     </div>
+    <nav className={nav}>
+      <ul>
+        <li><a href="/"> Home </a></li>
+        <li><a href="/about"> About </a></li>
+        <li><a href="/articles"> Articles </a></li>
+        <li><a href="/post"> Post </a></li>
+      </ul>
+    </nav>
   </header>
 
 export default NavBar

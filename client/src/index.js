@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 import App from './App';
-import {HomeContainer, AboutContainer, ArticlesContainer, PostArticleContainer, EditArticleContainer, SingleArticleContainer} from './containers';
+import {HomeContainer, AboutContainer, ArticlesContainer, PostArticleContainer, EditArticleContainer, SingleArticleContainer, CommentListContainer} from './containers';
 require('bootstrap/dist/css/bootstrap.css');
 
 ReactDOM.render(

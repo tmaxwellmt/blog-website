@@ -4,3 +4,4 @@ export {default as ArticlesContainer} from  './ArticlesContainer/ArticlesContain
 export {default as PostArticleContainer} from  './PostArticleContainer/PostArticleContainer'
 export {default as EditArticleContainer} from  './EditArticleContainer/EditArticleContainer'
 export {default as SingleArticleContainer} from  './SingleArticleContainer/SingleArticleContainer'
+export {default as PostCommentContainer} from  './PostCommentContainer/PostCommentContainer'
