@@ -45,11 +45,10 @@ class CommentListContainer extends Component {
   render() {
     return (
       <div className="article-container">
+
         <h3> { this.state.article }</h3>
-          ? <SingleArticleView
-          articles={this.state.article}
-          submitComment={this.submitComment}
-          text={this.state.text}/>
+          ? <CommentList
+          />
           : <h5>loading...</h5> }
       </div>
     );

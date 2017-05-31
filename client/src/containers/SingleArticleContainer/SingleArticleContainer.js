@@ -4,10 +4,13 @@ import {SingleArticleView} from '../../components';
 
 class SingleArticleContainer extends Component {
   state = {
-    article: undefined
+    article: undefined,
+    buttonColor: false,
   }
   loadArticle = this.loadArticle.bind(this)
   componentDidMount = () => this.loadArticle()
+
+  toggleColor = () => this.setState({buttonColor: !this.state.buttonColor})
 
 // create a () that gets single blog posts from DB
 loadArticle(){
@@ -28,6 +31,8 @@ loadArticle(){
       <div className="article-container">
         { this.state.article
           ? <SingleArticleView
+          toggleColor={this.toggleColor}
+          buttonColor={this.state.buttonColor}
           article={this.state.article}/>
           : <h5>loading...</h5> }
       </div>

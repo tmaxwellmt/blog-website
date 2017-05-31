@@ -4,9 +4,7 @@ import Logo from './logo.svg';
 
 const NavBar = () =>
   <header className={header}>
-    <div className={logo}>
       <img src={Logo} alt="logo" />
-    </div>
     <nav className={nav}>
       <ul>
         <li><a href="/"> Home </a></li>

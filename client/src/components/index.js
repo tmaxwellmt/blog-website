@@ -5,4 +5,5 @@ export {default as PostArticleForm} from  './PostArticleForm/PostArticleForm'
 export {default as EditArticleForm} from  './EditArticleForm/EditArticleForm'
 export {default as SingleArticleView} from  './SingleArticleComponent/SingleArticleView'
 export {default as PostCommentForm} from  './PostCommentForm/PostCommentForm'
-export {default as NavBar} from  './NavBar/NavBar'
+export {default as NavBar} from  './NavBar/NavBar';
+export {default as CommentList} from './CommentList/CommentList';

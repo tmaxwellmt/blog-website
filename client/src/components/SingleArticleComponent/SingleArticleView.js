@@ -1,8 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router';
-import CommentList from '../CommentList/CommentList'
+import {PostCommentContainer} from '../../containers';
+var linkStyle = {
+
+      trueColor: {
+        backgroundColor: "red"
+    },
+    falseColor: {
+      backgroundColor: "blue"
+  }
+  }
+const hello = false;
 
 const SingleArticleView = (props) => {
+
   return (
     <div>
       <div>
@@ -13,10 +24,13 @@ const SingleArticleView = (props) => {
               <li>{ props.article.category }</li>
               <img src={ props.article.img }/>
               <li>{ props.article.content }</li>
+              <button onClick={() => props.toggleColor()}>Toggle Color</button>
             </ul>
-            <Link className="btn btn-warning" to={`/editPost/${props.article.id}`}>Edit</Link>
+            <div>
+              <PostCommentContainer id={props.article._id} />
+            </div>
+            <Link style={props.buttonColor ? linkStyle.trueColor : linkStyle.falseColor } className="btn btn-warning" to={`/editPost/${props.article.id}`}>Edit</Link>
         </div>
-        <CommentList comments={props.article.comments}/>
       </div>
 
     </div>

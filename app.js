@@ -8,11 +8,10 @@ var bodyParser = require('body-parser');
 var Article = require('./models/article');
 var routes = require('./routes/index');
 require('./config/database-connect') ();
-require('./config/database-seeder') ();
 
-// if(process.env.SEED_DATABASE === "true") {
-//   require('./config/database-seeder')();
-// }
+if(process.env.SEED_DATABASE === "true") {
+  require('./config/database-seeder')();
+}
 
 
 
