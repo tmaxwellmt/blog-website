@@ -7,13 +7,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var Article = require('./models/article');
 var routes = require('./routes/index');
+var session = require('express-session');
+var passport = require('passport');
+var auth = require('./routes/auth');
 require('./config/database-connect') ();
 
 if(process.env.SEED_DATABASE === "true") {
   require('./config/database-seeder')();
 }
-
-
 
 var app = express();
 var mongoose = require('mongoose');
@@ -26,6 +27,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(session({
+ secret: 'blahblahblah'
+})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(session({
+ cookie: {
+   maxAge: 60000
+ }
+}));
+require('./config/passport')(passport); // pass passport for configuration
+require('./routes/auth')(app, passport); // load our routes and pass in our app and fully configured passport
 
 app.get('/test', function (req, res) {
   res.json({message: "App functioning properly"})
