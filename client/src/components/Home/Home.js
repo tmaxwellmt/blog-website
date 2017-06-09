@@ -24,12 +24,8 @@ const Home = (props) => {
         <div className={flexSecond}>
           <div className={flexContent}>
             <div className={btnRow}>
-              <button className={myBtn} type="button" onClick={(event) =>
-              props.handleSubmit(event)}>Login!</button>
-              <Link className={myBtn} to={'/signup'}>New User?</Link>
-              <button className={myBtn} type="button" onClick={(event) =>
-              props.handleSubmit(event)}>Sign Up!</button>
-              <Link className={myBtn} to={'/login'}>Back to Login</Link>
+              <Link className={myBtn} to={'/signup'}>Signup</Link>
+              <Link className={myBtn} to={'/login'}>Login</Link>
             </div>
           </div>
         </div>
