@@ -1,14 +1,15 @@
-import React from 'react';
-import SignUp from './SignUpForm';
+import React, {Component} from 'react';
+import {browserHistory} from 'react-router';
+import $ from 'jquery';
+import SignUpForm from './SignUpForm';
 
-
-class SignUpContainer extends Component {
+class SignUpContainer extends Component{
   state = {
     email: undefined,
     password: undefined
   }
   updateField = this.updateField.bind(this);
-  updateField(field, value) {
+  updateField(field, value){
     const newState = {};
     newState[field] = value;
     this.setState(newState);
@@ -16,23 +17,27 @@ class SignUpContainer extends Component {
   handleSubmit = this.handleSubmit.bind(this);
   handleSubmit(event){
     event.preventDefault();
-    console.log("state is now:", this.state);
+    console.log('state is now:', this.state);
     const local = {email: this.state.email, password: this.state.password};
     $.ajax({
-      url: '/api/signup',
+      url:'/api/signup',
       method: 'POST',
       data: local
-    }).done((response) => (response._id) ? browserHistory.push('/login')
-      : browserHistory.push(`/error/${response.message}`));
+    }).done((response) => {
+    console.log(response, 'after post');
+    (response._id) ? browserHistory.push('/login') :
+      browserHistory.push(`/error/${response.message}`);
+    })
   }
-  render() {
+  render(){
     return(
       <SignUpForm
         updateField = {this.updateField}
         handleSubmit = {this.handleSubmit}
       />
     )
+
   }
 }
 
-export default SignUpContainer
+export default SignUpContainer;

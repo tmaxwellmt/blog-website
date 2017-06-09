@@ -9,9 +9,9 @@ const ArticleList = (props) => {
     <div className= {listFlex}>
     { props.articles.map((item, index) => {
       return (
-        <div key={index} className= {articlePanel}>
+        <div key={index} className={articlePanel}>
           <div>
-            <h3 className= {articleTitle}>{item.title}</h3>
+            <h3 className={articleTitle}>{item.title}</h3>
             <img className={image} src={item.img} />
             <ol>
               <div className={category}><li>{item.category}</li></div>
@@ -21,7 +21,6 @@ const ArticleList = (props) => {
             <ul className={myBtns}>
               <Link  className= {myBtn} to={`/edit/${item._id}`}>Edit</Link>
               <Link  className= {myBtn} to={`/article/${item._id}`}>View Post</Link>
-              <Link  className= {myBtn} to={`/article/${item._id}`}>Delete Post</Link>
             </ul>
           </div>
         </div>
